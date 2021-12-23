@@ -1,0 +1,51 @@
+/* .textoNaImagem {
+  ;
+} */
+
+.textoNaImagem .slogan{
+  color: #cc3545;
+  position:relative;
+  margin-bottom: 25px;
+}
+
+.dTexto .slogan{
+  bottom: 300px;
+  left:75px;
+}
+
+.eTexto .slogan{
+  text-align: end;
+  bottom: 300px;
+  left:250px;
+}
+
+.slogan{
+  font-size: 100px;
+  text-shadow: black 0.25rem 0.40rem 0.15rem;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+@media (max-width: 1440px) {
+  .slogan {
+  font-size: 75px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slogan {
+  font-size: 50px;
+  text-shadow: black 0.20rem 0.25rem 0.15rem;
+  }
+
+  .eTexto .slogan{
+  left:75px;
+  }
+
+  .dTexto .slogan{
+    left:25px;
+  }
+}
+
+.textoNaImagem .slogan small {
+  display:block;
+}

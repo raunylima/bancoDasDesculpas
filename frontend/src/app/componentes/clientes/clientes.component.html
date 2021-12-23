@@ -1,0 +1,30 @@
+<h2 class="text-center mt-5 fw-bold">CLIENTES</h2>
+
+<div class="container vertical-align-center" style="width: 90%;">
+
+  <button routerLink="/fazer-transferencia" type="button" class="btn btn-outline-dark my-3">Nova Transferência</button>
+
+<table class="table table-light table-striped text-center align-middle" >
+  <thead>
+    <tr>
+      <th scope="col">Nº Transferência</th>
+      <th scope="col">Nome do Cliente</th>
+      <th scope="col">Vlr. Transferido</th>
+      <th scope="col">Conta do Cliente</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let item of ListarTransferencias">
+      <th>{{item.id_transferencia}}</th>
+      <td>{{item.nomeCliente}}</td>
+      <td class="text-end">{{item.valorTransferencia | currency: 'BRL'}}</td>
+      <td>{{item.contaCliente + '-' +item.digitoConta}}</td>
+      <td class="d-flex flex-wrap justify-content-center align-itens-center">
+        <button (click)="editar(item.id_transferencia)" type="button" class="btn btn-outline-warning me-1">Editar</button>
+        <button (click)="excluir(item.id_transferencia)" type="button" class="btn btn-outline-danger ms-1">Excluir</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

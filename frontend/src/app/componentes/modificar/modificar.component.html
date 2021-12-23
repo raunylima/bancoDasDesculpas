@@ -1,0 +1,26 @@
+<h2 class="text-center mt-5 fw-bold">EDITAR TRANSFERÊNCIA</h2>
+
+<div class="container">
+  <div class="col">
+    <form action="">
+      <div class="mb-1">
+        <label for="" class="form-label">Nome do Cliente</label>
+        <input [(ngModel)]="transferencia.nomeCliente" type="text" class="form-control" name="nomeCliente" required>
+      </div>
+      <div class="mb-1">
+        <label for="" class="form-label">Valor da Transferência</label>
+        <input [(ngModel)]="transferencia.valorTransferencia" type="number" class="form-control" name="valorTransferencia" maxlength="9" required>
+      </div>
+      <div class="mb-1">
+        <label for="" class="form-label">Número da Conta</label>
+        <div class="d-flex flex-wrap">
+          <input style="width: 70%;" [(ngModel)]="transferencia.contaCliente" type="text" class="form-control" name="contaCliente" minLength="1" maxlength="7" required>
+          <input style="width: 30%;" [(ngModel)]="transferencia.digitoConta" type="text" class="form-control" name="digitoConta" maxlength="1" required>
+        </div>
+      </div>
+      <div class="my-4">
+        <button (click)="modificar()" class="btn btn-success">Atualizar</button>
+      </div>
+    </form>
+  </div>
+</div>
